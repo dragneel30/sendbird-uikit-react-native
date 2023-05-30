@@ -143,7 +143,7 @@ const FileViewer = ({
         })
         .catch((err) => {
           toast.show(STRINGS.TOAST.DOWNLOAD_ERROR, 'error');
-          Logger.log('File save failure', err);
+          Logger.log('File save failure fileviewer', err);
         });
     }
   };

@@ -135,8 +135,10 @@ const createExpoFileService = ({
       const basePath = fsModule.documentDirectory || fsModule.cacheDirectory;
       if (!basePath) throw new Error('Cannot determine directory');
 
+
       const downloadPath = `${basePath}/${options.fileName}`;
 
+      console.log('start saving expo.....')
       const response = await fsModule.downloadAsync(options.fileUrl, downloadPath);
       if (getFileType(options.fileType || '').match(/video|image/)) {
         await mediaLibraryModule.saveToLibraryAsync(response.uri);

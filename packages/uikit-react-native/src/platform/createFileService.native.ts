@@ -196,6 +196,8 @@ const createNativeFileService = ({
       const { downloadedPath, file } = await this.downloadFile(options);
 
       if (Platform.OS === 'ios') {
+
+        console.log('start saving native.....')
         if (file.type === 'image' || file.type === 'video') {
           const mediaTypeMap = { 'image': 'photo', 'video': 'video' } as const;
           const mediaType = mediaTypeMap[file.type];

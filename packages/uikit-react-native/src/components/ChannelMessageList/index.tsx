@@ -308,7 +308,7 @@ const useGetMessagePressActions = <T extends SendbirdGroupChannel | SendbirdOpen
             })
             .catch((err) => {
               toast.show(STRINGS.TOAST.DOWNLOAD_ERROR, 'error');
-              Logger.log('File save failure', err);
+              Logger.log('File save failure messagelist', err);
             });
         },
       });
